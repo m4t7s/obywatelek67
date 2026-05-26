@@ -736,16 +736,5 @@
             window.location.href = targetUrl;
         });
     </script>
-    
-    <script>
-  // Sprawdza, czy użytkownik przyszedł z adresu zawierającego "index.html" lub z samej strony głównej "/"
-  const odniesienie = document.referrer;
-  
-  if (!odniesienie.includes("index.html") && odniesienie !== window.location.origin + "/") {
-    // Natychmiastowe przekierowanie na stronę główną domeny
-    window.location.href = window.location.origin; 
-  }
-</script>
-
 </body>
 </html>
