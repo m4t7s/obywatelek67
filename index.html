@@ -373,6 +373,18 @@
             }
         });
     </script>
+    
+    <script>
+  (function() {
+    const pochodzenie = document.referrer;
+    const stronaGlowna = window.location.origin + "/";
 
+    // Jeśli użytkownik wpisał adres z palca (brak referrera) 
+    // LUB przyszedł z adresu innego niż Twoja strona główna:
+    if (!pochodzenie || pochodzenie !== stronaGlowna) {
+      window.location.replace(stronaGlowna);
+    }
+  })();
+</script>
 </body>
 </html>
